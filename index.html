@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周思纯 · 简历 · Senior IT Business Analyst - AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eef3f7;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem 1rem;
+            line-height: 1.5;
+            color: #1a2b3c;
+        }
+
+        .resume {
+            max-width: 1050px;
+            width: 100%;
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0 20px 40px -10px rgba(0, 20, 40, 0.25);
+            overflow: hidden;
+            display: block; 
+        }
+
+        .header {
+            width: 100%; 
+            background: linear-gradient(145deg, #0a2942 0%, #123b5e 100%);
+            color: white;
+            padding: 2rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            border-bottom: 5px solid #48a0c0;
+        }
+
+        .name-title {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .name-title h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+
+        .name-title h1 span {
+            font-weight: 300;
+            font-size: 2rem;
+            color: #b0d4e8;
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #cce3f0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .badge {
+            background: #48a0c0;
+            color: #0a1e2c;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.25rem 1rem;
+            border-radius: 30px;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+
+        .contact-area {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 60px;
+        }
+
+        .contact-info p {
+            margin: 0.2rem 0;
+            white-space: nowrap;
+        }
+
+        .avatar-placeholder {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #cfddee;
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+        }
+
+        .lang-tab {
+            width: 100%;
+            background: #f0f6fd;
+            padding: 0.5rem 2.5rem 0 2.5rem;
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 1px solid #d4e0ec;
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2a4f70;
+            cursor: pointer;
+            border-radius: 30px 30px 0 0;
+            transition: all 0.1s;
+        }
+        .lang-btn.active {
+            background: white;
+            color: #0a2942;
+            font-weight: 600;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.02);
+            border: 1px solid #d4e0ec;
+            border-bottom-color: white;
+        }
+
+        .lang-content {
+            display: block;
+            width: 100%;
+        }
+        .lang-content.en-version {
+            display: none;
+        }
+
+        .highlight-strip {
+            width: 100%;
+            background-color: #f0f6fd;
+            padding: 1.2rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            border-bottom: 1px solid #dbe4ed;
+            font-size: 0.95rem;
+            color: #124066;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .highlight-item strong {
+            font-weight: 700;
+            color: #0a2942;
+            background: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 50px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            white-space: nowrap;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 34fr 66fr; 
+            width: 100%;
+        }
+
+        .left-panel {
+            background: #f9fcff;
+            padding: 2rem 2rem 2rem 2.2rem;
+            border-right: 1px solid #dae2ec;
+            min-width: 0; 
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .right-panel {
+            background: white;
+            padding: 2rem 2.2rem 2.5rem 2.2rem;
+            min-width: 0; 
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0f3b5e;
+            letter-spacing: -0.2px;
+            border-bottom: 3px solid #aaccdd;
+            padding-bottom: 0.4rem;
+            margin: 1.5rem 0 1.2rem 0;
+        }
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .edu-item { margin-bottom: 1.4rem; }
+        .edu-item h3 { font-size: 1.1rem; font-weight: 600; color: #002b4a; }
+        .edu-meta { color: #3f627c; font-size: 0.9rem; margin: 0.2rem 0 0.3rem 0; line-height: 1.4;}
+        .edu-desc { font-size: 0.95rem; color: #1d3d5c; }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.7rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .skill-tag {
+            background: white;
+            border: 1px solid #bfd6e9;
+            color: #0b3752;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* 关键1：长文本换行时，保证左右两端在顶部对齐 */
+            gap: 1rem; /* 关键2：强制左右保持至少 1rem 的安全距离，绝不粘连 */
+            font-size: 0.95rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px dashed #cdddee;
+        }
+        /* 专门控制右侧的语言描述文字 */
+        .lang-item span:last-child {
+            flex: 1; /* 占据剩下的全部空间 */
+            text-align: right; /* 让换行后的第二行文字也能向右边缘整齐对齐 */
+        }
+
+        .exp-item { margin-bottom: 2rem; }
+        .exp-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.3rem;
+            gap: 1rem;
+        }
+        .exp-header h3 { font-size: 1.2rem; font-weight: 600; color: #003057; }
+        .exp-header .exp-date {
+            color: #2b5c7c;
+            font-weight: 500;
+            background: #e6f0f7;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        .exp-sub { font-weight: 600; color: #1b6b9c; margin: 0.2rem 0 0.4rem 0; font-size: 0.98rem; }
+
+        .exp-desc {
+            padding-left: 0.5rem;
+            border-left: 3px solid #9dc3d9;
+            margin-top: 0.4rem;
+        }
+                
+        .exp-desc p {
+            margin: 0.6rem 0;
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .exp-desc p .bullet-dot {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #1f6fa5;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.2rem;
+            text-align: left;
+        }
+
+        .footer-note {
+            width: 100%;
+            font-size: 0.8rem;
+            color: #7089a3;
+            text-align: right;
+            padding: 1rem 2.5rem 1.2rem;
+            border-top: 1px solid #dae2ec;
+            background: #f3f8fe;
+        }
+/* 让二级标题变成弹性盒子，两端对齐 */
+        .sub-project {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem; /* 防止左边标题太长跟右边时间撞上 */
+        }
+
+        /* 锁定时间格式，确保时间在右侧且不换行 */
+        .project-date {
+            white-space: nowrap; 
+            font-weight: 500;
+            color: #5c7b92; /* 我顺手加了个稍微柔和一点的灰色，如果不喜欢可以删掉这行 */
+        }
+
+        @media (max-width: 1024px) {
+            .header { flex-direction: column; text-align: center; justify-content: center; }
+            .name-title { min-width: 100%; }
+            .subhead { justify-content: center; }
+            .contact-area { justify-content: center; }
+            .contact-info { text-align: center; }
+            
+            .main-content { 
+                grid-template-columns: 1fr; 
+            }
+            
+            .left-panel { border-right: none; border-bottom: 1px solid #dae2ec; padding-bottom: 2rem; }
+            .highlight-strip { justify-content: center; }
+            .lang-tab { justify-content: center; }
+        }
+        /* ========== 专门针对英文版整体“瘦身” ========== */
+        
+        /* 1. 缩小英文版左侧的技能标签，减少内边距，让一行能塞下更多 */
+        .en-version .skill-tag {
+            font-size: 0.75rem; 
+            padding: 0.15rem 0.6rem;
+        }
+
+        /* 2. 缩小英文版的正文描述（教育背景、工作经历） */
+        .en-version .exp-desc p,
+        .en-version .edu-desc {
+            font-size: 0.85rem;
+            line-height: 1.4; /* 稍微收紧一点行高 */
+        }
+
+        /* 3. 缩小英文版的语言能力列表 */
+        .en-version .lang-item {
+            font-size: 0.85rem;
+        }
+
+        /* 4. 缩小英文版的二级标题（职位、项目名） */
+        .en-version .exp-sub {
+            font-size: 0.9rem;
+        }
+
+        /* 5. 缩小英文版顶部的亮点栏 */
+        .en-version .highlight-strip {
+            font-size: 0.85rem;
+        }
+        /* ========== 独立项目 (Side Projects) 统一紧凑样式 ========== */
+        .side-projects {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem; /* 稍微缩紧项目之间的间距 */
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sp-item h4 {
+            font-size: 0.9rem; /* 中英文字体统一调小 */
+            font-weight: 600;
+            color: #003558;
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* 标题居左，状态标签居右 */
+        }
+        
+        .sp-item p {
+            color: #3f627c;
+            line-height: 1.4;
+            font-size: 0.8rem; /* 描述文字统一调小 */
+        }
+
+        /* 统一的状态标签样式 (默认：已部署) */
+        .sp-item h4 span {
+            font-size: 0.7rem;
+            background: #e6f0f7; /* 浅蓝底色，不抢戏 */
+            color: #2b5c7c;
+            padding: 0.15rem 0.6rem;
+            border-radius: 20px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        /* 针对“研发中”的特殊状态色 */
+        .sp-item h4 span.in-progress {
+            background: #48a0c0; /* 深一点的蓝色，表示正在进行 */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="resume">
+
+    <div class="header">
+        <div class="name-title">
+            <h1>周思纯 <span>· Sichun Zhou</span></h1>
+            <div class="subhead">
+                Senior Business Analyst / Product Manager
+                <span class="badge">AI</span>
+            </div>
+        </div>
+        <div class="contact-area">
+            <div class="contact-info">
+                <p>166-9282-69982  ·  Zscjune@163.com</p>
+                <p>Base Shanghai  ·  The University of Sydney  </p>
+            </div>
+            <div class="avatar-placeholder" style="background-image: url('avatar.jpg');"></div>
+        </div>
+    </div>
+
+    <div class="lang-tab">
+        <button class="lang-btn active" id="btn-zh">中文</button>
+        <button class="lang-btn" id="btn-en">English</button>
+    </div>
+
+    <div id="content-zh" class="lang-content zh-version">
+        <div class="highlight-strip">
+            <div class="highlight-item"><strong>3+年</strong> AI/数字化产品BA</div>
+            <div class="highlight-item"><strong>跨文化协作</strong> 欧洲/亚太经验</div>
+            <div class="highlight-item"><strong>AI Chatbot</strong> 0-1落地</div>
+            <div class="highlight-item"><strong>Data insight</strong> 数据分析经验</div>
+            <div class="highlight-item"><strong>价值追踪</strong> BI报表项目设计</div>
+            <div class="highlight-item"><strong>敏捷交付</strong> 需求快速落地</div>
+        </div>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="section-title">教育背景</div>
+                <div class="edu-item">
+                    <h3>悉尼大学 · 金融硕士</h3>
+                    <div class="edu-meta">2021/03 – 2022/12 | QS 18 | 澳大利亚悉尼</div>
+                    <div class="edu-desc">全英文授课，辅修数据分析，以distinction成绩毕业</div>
+                </div>
+                <div class="edu-item">
+                    <h3>莫纳什大学 · 金融学士</h3>
+                    <div class="edu-meta">2018/08 – 2020/12 | QS 37 | 澳大利亚墨尔本</div>
+                    <div class="edu-desc">全英文授课，主修公司金融、计量经济学，以distinction成绩毕业</div>
+                </div>
+
+                <div class="section-title">核心能力</div>
+                <div style="font-weight:600; color:#003558;">业务分析</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">需求挖掘</span>
+                    <span class="skill-tag">用户故事</span>
+                    <span class="skill-tag">产品管理</span>
+                    <span class="skill-tag">价值定义/KPI</span>
+                    <span class="skill-tag">跨文化协作</span>
+                </div>
+                <div style="font-weight:600; color:#003558;">产品工具</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Jira/Confluence</span>
+                    <span class="skill-tag">MS Office</span>
+                    <span class="skill-tag">Axure/Figma/Miro/Drawio</span>
+                    <span class="skill-tag">多语言用户手册</span>
+                </div>
+                <div style="font-weight:600; color:#003558;">数据分析</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Excel/VBA</span>
+                    <span class="skill-tag">PowerBI</span>
+                </div>
+                <div style="font-weight:600; color:#003558;">项目管理</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">敏捷管理</span>
+                    <span class="skill-tag">跨部门沟通</span>
+                    <span class="skill-tag">时间管理</span>
+                    <span class="skill-tag">风险管理</span>
+                </div>
+
+                <div class="section-title">语言能力</div>
+                <div class="lang-item"><span>英语</span> <span>雅思7.0 · 工作语言</span></div>
+                <div class="lang-item"><span>日语</span> <span>N2 · 日常及业务沟通</span></div>
+                
+                <div class="section-title">独立项目</div>
+                <div class="side-projects">
+                    <div class="sp-item">
+                        <h4>在线塔罗牌测算应用 <span class="in-progress">研发中</span></h4>
+                        <p>独立全栈开发，基于Openclaw实现自主批量开发与敏捷部署，打通完整产品闭环。</p>
+                    </div>
+                    <div class="sp-item">
+                        <h4>个人时间管理系统 <span>已部署</span></h4>
+                        <p>从零设计并完成系统架构与代码实现，建立个人效能追踪数字大脑。</p>
+                    </div>
+                    <div class="sp-item">
+                        <h4>PDF题库生成与错题本<span>已部署</span></h4>
+                        <p>实现 PDF 智能解析与知识点提取，自动生成可交互的个性化复习题库。</p>
+                    </div>
+                    <div class="sp-item">
+                        <h4>“治好选择困难症”工具 <span>已部署</span></h4>
+                        <p>轻量级交互设计与开发，运用极简逻辑帮助用户快速解决多选项决策痛点。</p>
+                    </div>
+                </div>
+
+                <div class="section-title">个人评价</div>
+                <div style="font-size:0.95rem;">
+                    <p>✔ 备考AWS AI Practitioner</p>
+                    <p>✔ 适应跨文化协作 · 热情包容</p>
+                    <p>✔ 爱好旅游/运动 · 抗压 · 快速学习</p>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="section-title">工作经验</div>
+                <div class="exp-item">
+                    <div class="exp-header"><h3>凯捷咨询 (Capgemini)</h3><span class="exp-date">2023/02 – 至今</span></div>
+                    <div class="exp-sub">业务分析师 / 运营数据分析师</div>
+                    <div class="exp-sub sub-project">• 英格卡（宜家集团）商业地产业务资产管理系统 <span class="project-date">2025/09 – 至今</span></div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>亚太区需求管理：</strong>作为核心协调人，联动欧洲业务、国内开发及美国产品团队，收集整合中国与欧洲差异化需求，交付中国&印度团队开发，确保全球产品目标与区域需求对齐</p>
+                        <p><span class="bullet-dot">·</span> <strong>AI应用预研与用例定义：</strong>识别租户管理AI适用场景（智能问题分类/AI集成多表单应用），定义痛点陈述、使用场景、成功指标及预期价值，推动AI方案融入全球产品</p>
+                        <p><span class="bullet-dot">·</span> <strong>BI报表业务价值定义：</strong>主导BI报表重构，引导业务定义KPI（租户活跃度/处理时效），关键指标纳入绩效考核，实现运营追踪闭环</p>
+                        <p><span class="bullet-dot">·</span> <strong>端到端产品负责：</strong>需求收集→方案设计→协调三地→测试验收，完整owner意识，减少返工，提升交付效率</p>
+                    </div>
+
+                    <div class="exp-sub sub-project">• 固特异 SFE销售系统项目 <span class="project-date">2023/02 – 2024/09</span></div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>AI功能设计与落地：</strong>与40+核心用户深度沟通，将销售痛点拆解为AI Chatbot需求（用户故事、功能特性），主导销售场景AI Chatbot全流程设计，定义“销售行为智能推荐”核心功能，通过用户需求拆解明确AI交互逻辑，推动功能顺利上线</p>
+                        <p><span class="bullet-dot">·</span> <strong>系统测试：</strong>设计全面的测试用例，对软件进行了严格的测试，包括功能测试、性能测试、安全测试等，确保系统功能符合用户需求且稳定运行</p>
+                        <p><span class="bullet-dot">·</span> <strong>全球用户培训：</strong>联动全球9个地区团队梳理需求，针对不同地区用户习惯编写多语言用户手册，通过线上直播+录播形式开展培训，共同探讨产品全球化和本地化机会，探索AI Chatbot全球化适配，提高用户的使用体验和满意度</p>
+                        <p><span class="bullet-dot">·</span> <strong>用户使用情况分析：</strong>负责收集和分析用户的使用数据，以了解软件的使用情况和用户的行为习惯，并为后续的迭代开发提供有力支持</p>
+                        <p><span class="bullet-dot">·</span> <strong>运维及迭代管理：</strong>收集AI Chatbot使用数据（如查询准确率、用户停留时长），优化模型交互规则；参与多个版本的迭代开发，负责跟踪和管理迭代任务，确保每个迭代都能够按时交付，并达到预期的目标，提高用户的使用体验</p>
+                    </div>
+
+                    <div class="exp-sub sub-project">• 霸王茶姬增长业务探索项目 <span class="project-date">2024/10 – 2025/02</span></div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>数据处理与建模：</strong>运用 SQL 提取近 12 个月超 50 万条销售核心数据，通过 Python 完成数据清洗、建模及可视化分析，搭建用户消费行为、产品属性、用户属性三大核心分析框架，精准识别业务关键影响因子</p>
+                        <p><span class="bullet-dot">·</span> <strong>数据质量把控：</strong>在数据处理全流程中核查异常数据、修正数据偏差，严格保障数据完整性与准确性，确保分析结果的可靠性，为产品优化提供精准数据支撑</p>
+                        <p><span class="bullet-dot">·</span> <strong>业务洞察落地：</strong>基于分析结果输出 17 页专业数据报告，提出 6 项可落地的产品/业务优化策略，直接推动试点门店营收增长 12%，实现数据洞察到产品价值的转化</p>
+                    </div>
+
+                    <div class="exp-sub sub-project">• 周大福 & Costco 开市客 电商 / 会员系统功能体验优化项目 <span class="project-date">2025/03 – 2025/08</span></div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>周大福电商体验优化：</strong>锁定 21 家竞品品牌及 6 家核心竞品，从功能、操作流程、视觉效果等维度开展竞品分析，结合用户调研结果输出精准用户画像，跨团队合作完成 96 页 PPT 产品优化咨询方案，为电商产品体验升级提供可落地路径</p>
+                        <p><span class="bullet-dot">·</span> <strong>Costco 会员系统设计：</strong>使用 Figma 完成会员管理系统全流程产品设计，覆盖会员升等、消费返利累计发放、法务场景设计等 6 大核心模块，优化关键操作路径运行效率；输出标准化设计规范文档，配合开发团队明确技术细节，保障设计方案 100% 落地</p>
+                        <p><span class="bullet-dot">·</span> <strong>产品验证与优化：</strong>组织 5 名核心会员开展产品可用性测试，根据用户反馈优化按钮布局及交互逻辑，推动产品原型满意度从 68% 提升至 92%，显著提升用户产品使用体验</p>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header"><h3>德勤咨询 (Deloitte)</h3><span class="exp-date">2022/02 – 2022/12</span></div>
+                    <div class="exp-sub">产品经理 (风险预测方向)</div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>数据驱动产品设计：</strong>主导定性及定量数据清洗与规则化输出，通过分析资产减值数据波动规律，优化风险预测模型参数调整机制，为风险预测产品落地提供核心数据支撑，实现数据与产品功能的深度融合</p>
+                        <p><span class="bullet-dot">·</span> <strong>模型迭代与优化：</strong>结合客户业务需求定义违约判定标准，创新性引入 3 项定性指标作为协变量，推动风险预测模型精准度提升 15%，显著提升产品核心分析能力与商业价值</p>
+                        <p><span class="bullet-dot">·</span> <strong>产品化落地：</strong>整合第三方合作数据源与公开定性信息，通过数据交叉分析输出评级阈值建议，联动客户完成信用分级体系产品化落地，实现从数据洞察到产品功能的完整转化，具备独立的产品从 0 到 1 落地能力</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">
+            Sichun Zhou - Senior Business Analyst / Product Manager AI
+        </div>
+    </div> <div id="content-en" class="lang-content en-version">
+        <div class="highlight-strip">
+            <div class="highlight-item"><strong>3+ years</strong> AI/Digital Product BA</div>
+            <div class="highlight-item"><strong>Cross-cultural</strong> Europe/APAC experience</div>
+            <div class="highlight-item"><strong>AI Chatbot</strong> 0-1 launch</div>
+            <div class="highlight-item"><strong>Data Insight</strong> Data analysis experience</div>
+            <div class="highlight-item"><strong>Value Tracking</strong> BI dashboard design</div>
+            <div class="highlight-item"><strong>Agile Delivery</strong> Rapid requirement implementation</div>
+        </div>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="section-title">Education</div>
+                <div class="edu-item">
+                    <h3>The University of Sydney · Master of Finance</h3>
+                    <div class="edu-meta">2021/03 – 2022/12 | QS 18 | Sydney, Australia</div>
+                    <div class="edu-desc">English instruction, minor in Data Analytics, graduated with Distinction</div>
+                </div>
+                <div class="edu-item">
+                    <h3>Monash University · Bachelor of Finance</h3>
+                    <div class="edu-meta">2018/08 – 2020/12 | QS 37 | Melbourne, Australia</div>
+                    <div class="edu-desc">English instruction, majored in Corporate Finance and Econometrics, graduated with Distinction</div>
+                </div>
+
+                <div class="section-title">Core Competencies</div>
+                <div style="font-weight:600; color:#003558;">Business Analysis</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Requirement Discovery</span>
+                    <span class="skill-tag">User Stories</span>
+                    <span class="skill-tag">Product Management</span>
+                    <span class="skill-tag">Value Definition / KPIs</span>
+                    <span class="skill-tag">Cross-Cultural Collaboration</span>
+                </div>
+                <div style="font-weight:600; color:#003558;">Product Tools</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Jira/Confluence</span>
+                    <span class="skill-tag">MS Office</span>
+                    <span class="skill-tag">Axure/Figma/Miro/Drawio</span>
+                    <span class="skill-tag">Multi-language User Manuals</span>
+                </div>
+                <div style="font-weight:600; color:#003558;">Data Analytics</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Excel/VBA</span>
+                    <span class="skill-tag">BI Dashboard / KPI Design</span>
+                </div>
+                <div style="font-weight:600; color:#003558;">Project Management</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Agile Management</span>
+                    <span class="skill-tag">Cross-Functional Communication</span>
+                    <span class="skill-tag">Time Management</span>
+                    <span class="skill-tag">Risk Management</span>
+                </div>
+
+                <div class="section-title">Languages</div>
+                <div class="lang-item"><span>English</span> <span>IELTS 7.0 · Working proficiency</span></div>
+                <div class="lang-item"><span>Japanese</span> <span>N2 · Daily and business communication</span></div>
+                <div class="section-title">Side Projects</div>
+                <div class="side-projects">
+                    <div class="sp-item">
+                        <h4>Online Tarot App <span class="in-progress">In Progress</span></h4>
+                        <p>Independent full-stack development. Utilizing Openclaw for autonomous batch development and rapid deployment.</p>
+                    </div>
+                    <div class="sp-item">
+                        <h4>Time Management System <span>Deployed</span></h4>
+                        <p>Designed and implemented from scratch to track and optimize personal productivity workflows.</p>
+                    </div>
+                    <div class="sp-item">
+                        <h4>PDF question bank and error book<span>Deployed</span></h4>
+                        <p>Developed an interactive tool to parse PDFs, extract knowledge points, and generate personalized question banks.</p>
+                    </div>
+                    <div class="sp-item">
+                        <h4>Decision-Making App <span>Deployed</span></h4>
+                        <p>A lightweight, interactive web app built to help users quickly resolve multi-choice dilemmas.</p>
+                    </div>
+                </div>
+                <div class="section-title">Self Evaluation</div>
+                <div style="font-size:0.95rem;">
+                    <p>✔ Preparing for AWS AI Practitioner</p>
+                    <p>✔ Adaptable to cross-cultural collaboration · Enthusiastic and inclusive</p>
+                    <p>✔ Enjoy traveling/sports · Resilient · Quick learner</p>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="section-title">Work Experience</div>
+                <div class="exp-item">
+                    <div class="exp-header"><h3>Capgemini</h3><span class="exp-date">2023/02 – Present</span></div>
+                    <div class="exp-sub">Business Analyst / Operations Data Analyst</div>
+                    <div class="exp-sub sub-project">• Ingka Group (IKEA) Commercial Real Estate Asset Management System <span class="project-date">2025/09 – Present</span></div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>APAC Demand Management:</strong> As the key coordinator, bridged European business, domestic development, and US product teams, collected and consolidated differentiated requirements from China and Europe, delivered to China & India development teams, ensuring alignment between global product goals and regional needs.</p>
+                        <p><span class="bullet-dot">·</span> <strong>AI Pre-study & Use Case Definition:</strong> Identified AI application scenarios in tenant management (intelligent ticket classification / AI-powered multi-form integration), defined pain points, usage scenarios, success metrics, and expected value, driving AI solutions into global product roadmap.</p>
+                        <p><span class="bullet-dot">·</span> <strong>BI Dashboard Business Value Definition:</strong> Led BI dashboard redesign, guided business stakeholders to define KPIs (tenant activity, resolution time), integrated key metrics into performance evaluation, achieving closed-loop operational tracking.</p>
+                        <p><span class="bullet-dot">·</span> <strong>End-to-End Product Ownership:</strong> Full responsibility from requirement collection → solution design → cross-region coordination → UAT, demonstrating owner mindset, reducing rework, improving delivery efficiency.</p>
+                    </div>
+
+                    <div class="exp-sub sub-project">• Goodyear SFE Sales System Project <span class="project-date">2023/02 – 2024/09</span></div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>AI Feature Design & Launch:</strong> Engaged with 40+ core users, translated sales pain points into AI Chatbot requirements (user stories, features), led end-to-end design of sales-scenario AI Chatbot, defined core “smart sales behavior recommendation” function, clarified AI interaction logic through user requirement breakdown, drove successful launch.</p>
+                        <p><span class="bullet-dot">·</span> <strong>System Testing:</strong> Designed comprehensive test cases, conducted rigorous testing including functional, performance, and security testing, ensuring the system met user requirements and ran stably.</p>
+                        <p><span class="bullet-dot">·</span> <strong>Global User Training:</strong> Coordinated with 9 regional teams to gather requirements, created multi-language user manuals tailored to regional habits, delivered training via live webinars + recordings, explored globalization and localization opportunities for AI Chatbot, enhancing user experience and satisfaction.</p>
+                        <p><span class="bullet-dot">·</span> <strong>User Behavior Analysis:</strong> Collected and analyzed user usage data to understand software adoption and behavior patterns, providing insights for subsequent iteration development.</p>
+                        <p><span class="bullet-dot">·</span> <strong>Operations & Iteration Management:</strong> Gathered AI Chatbot usage data (e.g., query accuracy, user dwell time), optimized interaction rules; participated in multiple version iterations, tracked and managed iteration tasks to ensure on-time delivery and goal achievement, improving user experience.</p>
+                    </div>
+
+                    <div class="exp-sub sub-project">• CHAGEE Business Growth Exploration Project <span class="project-date">2024/10 – 2025/02</span></div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>Data Processing & Modeling:</strong> Extracted over 500,000 core sales records from the past 12 months using SQL, performed data cleaning, modeling, and visualization with Python, built three core analytical frameworks (user consumption behavior, product attributes, user attributes), accurately identified key business impact factors.</p>
+                        <p><span class="bullet-dot">·</span> <strong>Data Quality Assurance:</strong> Verified anomalous data and corrected deviations throughout the data processing workflow, strictly ensured data completeness and accuracy, guaranteed the reliability of analysis results, and provided precise data support for product optimization.</p>
+                        <p><span class="bullet-dot">·</span> <strong>Business Insight Implementation:</strong> Delivered a 17-page professional data report based on analysis results, proposed 6 actionable product/business optimization strategies, directly contributed to a 12% revenue increase in pilot stores, achieving the transformation from data insights to product value.</p>
+                    </div>
+
+                    <div class="exp-sub sub-project">• Chow Tai Fook & Costco E‑commerce / Membership System Functional Experience Optimization Project <span class="project-date">2025/03 – 2025/08</span></div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>Chow Tai Fook E‑commerce Experience Optimization:</strong> Conducted competitive analysis across 21 brands (6 core competitors) across functionality, workflow, and visual design; combined with user research to create precise user personas; collaborated cross‑functionally to deliver a 96‑page product optimization consulting deck, providing actionable pathways for e‑commerce experience enhancement.</p>
+                        <p><span class="bullet-dot">·</span> <strong>Costco Membership System Design:</strong> Completed end‑to‑end product design for the membership management system using Figma, covering 6 core modules including membership upgrades, rebate accumulation & distribution, and legal scenario design; optimized operational workflow efficiency; delivered standardized design specification documents, aligning with development teams on technical details to ensure 100% implementation fidelity.</p>
+                        <p><span class="bullet-dot">·</span> <strong>Product Validation & Iteration:</strong> Organized usability testing sessions with 5 core members, refined button layout and interaction logic based on user feedback, driving product prototype satisfaction from 68% to 92% and significantly enhancing the overall user experience.</p>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header"><h3>Deloitte</h3><span class="exp-date">2022/02 – 2022/12</span></div>
+                    <div class="exp-sub">Product Manager (Risk Prediction)</div>
+                    <div class="exp-desc">
+                        <p><span class="bullet-dot">·</span> <strong>Data-Driven Product Design:</strong> Led qualitative and quantitative data cleansing and rule definition, analyzed patterns in asset impairment data, optimized risk prediction model parameter adjustment mechanisms, provided core data support for product launch, achieving deep integration between data and product functionality.</p>
+                        <p><span class="bullet-dot">·</span> <strong>Model Iteration & Optimization:</strong> Defined default criteria based on client business needs, innovatively introduced 3 qualitative indicators as covariates, improving risk prediction model accuracy by 15%, significantly enhancing product analytical capabilities and business value.</p>
+                        <p><span class="bullet-dot">·</span> <strong>Productization & Implementation:</strong> Integrated third-party data sources and public qualitative information, delivered rating threshold recommendations through cross-analysis, collaborated with clients to productize credit grading system, achieving full transformation from data insights to product features, demonstrating independent 0-to-1 product delivery capability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-note">
+            Sichun Zhou - Senior Business Analyst / Product Manager AI
+        </div>
+    </div> </div> <script>
+    const btnZh = document.getElementById('btn-zh');
+    const btnEn = document.getElementById('btn-en');
+    const contentZh = document.getElementById('content-zh');
+    const contentEn = document.getElementById('content-en');
+
+    btnZh.addEventListener('click', function() {
+        btnZh.classList.add('active');
+        btnEn.classList.remove('active');
+        contentZh.style.display = 'block';
+        contentEn.style.display = 'none';
+    });
+
+    btnEn.addEventListener('click', function() {
+        btnEn.classList.add('active');
+        btnZh.classList.remove('active');
+        contentZh.style.display = 'none';
+        contentEn.style.display = 'block';
+    });
+
+    contentZh.style.display = 'block';
+    contentEn.style.display = 'none';
+</script>
+</body>
+</html>
